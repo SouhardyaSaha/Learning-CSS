@@ -41,10 +41,16 @@ main {
 
 .package-free {
   background: rgb(204, 251, 204);
-  margin-left: auto;
+  /* margin-left: auto; */ /* It can be done by this way without using float */
   border-right: none;
   border-left: 4px solid green;
   text-align: right;
+  float: right;
+}
+
+/* Hacking Way of using float */
+.clearfix {
+  clear: both;
 }
 
 .package-premium {
