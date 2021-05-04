@@ -8,9 +8,13 @@ body {
 }
 
 .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   background: rgb(38, 204, 38);
   padding: 10px 16px;
+  z-index: 1;
 }
 
 .brand-logo {
@@ -86,9 +90,12 @@ body {
 }
 
 .main-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background: black;
-  padding: 32px;
-  margin-top: 48px;
+  padding: 24px;
 }
 
 .main-footer__links {
