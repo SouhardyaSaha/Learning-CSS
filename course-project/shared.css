@@ -13,7 +13,7 @@ body {
   left: 0;
   width: 100%;
   background: rgb(38, 204, 38);
-  padding: 10px 16px;
+  padding: 8px 16px;
   z-index: 1;
 }
 
@@ -26,6 +26,13 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 22px;
+  height: 32px;
+  display: inline-block;
+  /* container has to be block or inline-block for img to respect container height and width */
+}
+
+.main-nav__brand img {
+  height: 100%;
 }
 
 .main-nav {
@@ -90,12 +97,13 @@ body {
 }
 
 .main-footer {
-  position: fixed;
+  /* position: fixed;
   bottom: 0;
-  left: 0;
+  left: 0; */
   width: 100%;
   background: black;
   padding: 24px;
+  /* margin-top: 24px; */
 }
 
 .main-footer__links {
