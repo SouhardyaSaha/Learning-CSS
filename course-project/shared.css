@@ -28,6 +28,28 @@ body {
   z-index: 1;
 }
 
+.toggle-button {
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__bar {
+  width: 100%;
+  height: 0.2rem;
+  background: black;
+  display: block;
+  margin: 0.6rem 0;
+}
+
 .brand-logo {
   display: inline-block;
   vertical-align: middle;
@@ -39,6 +61,7 @@ body {
   font-size: 1.3rem;
   height: 2rem;
   display: inline-block;
+  vertical-align: middle;
   /* container has to be block or inline-block for img to respect container height and width */
 }
 
@@ -49,7 +72,7 @@ body {
 .main-nav {
   display: inline-block;
   text-align: right;
-  width: calc(100% - 74px);
+  width: calc(100% - 122px);
   vertical-align: middle;
 }
 
@@ -64,14 +87,17 @@ body {
   margin: 0 1.2rem;
 }
 
-.main-nav__item a {
+.main-nav__item a,
+.mobile-nav__item a {
   text-decoration: none;
   color: #0e4f1f;
   font-weight: bold;
 }
 
 .main-nav__item a:hover,
-.main-nav__item a:active {
+.main-nav__item a:active,
+.mobile-nav__item a:hover,
+.mobile-nav__item a:active {
   color: white;
   border-bottom: 4px solid white;
 }
@@ -81,7 +107,8 @@ body {
   font-weight: bold;
 } */
 
-.main-nav__item--cta a {
+.main-nav__item--cta a,
+.mobile-nav__item--cta a {
   color: white;
   background: red;
   padding: 0.5rem 1rem;
@@ -89,10 +116,46 @@ body {
 }
 
 .main-nav__item--cta a:hover,
-.main-nav__item--cta a:active {
+.main-nav__item--cta a:active,
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active {
   color: red;
   background: white;
   border: none;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.8) 90%,
+    transparent
+  );
+  border: 2px solid black;
+  height: 100vh;
+  width: 80%;
+}
+
+.mobile-nav__items {
+  list-style: none;
+  width: 90%;
+  height: 100%;
+  margin: 10% auto;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile-nav__item {
+  margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+  /* color: black; */
+  font-size: 1.2rem;
 }
 
 .button {
@@ -137,4 +200,8 @@ body {
 .main-footer__link a:hover,
 .main-footer__link a:active {
   color: gainsboro;
+}
+
+.open {
+  display: block !important;
 }
