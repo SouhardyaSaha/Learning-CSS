@@ -19,6 +19,7 @@ main {
   width: 70%;
   background: rgba(173, 253, 173, 0.9);
   position: relative;
+  min-width: 18rem;
 }
 
 .package:hover,
@@ -82,4 +83,15 @@ main {
 
 .package-premium .package__title {
   color: white;
+}
+
+@media (min-width: 52rem) {
+  main {
+    width: 70%;
+    margin: 2rem auto;
+  }
+
+  .package {
+    border: 4px solid rgba(0, 128, 0);
+  }
 }
