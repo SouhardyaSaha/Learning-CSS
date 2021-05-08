@@ -70,10 +70,7 @@ body {
 }
 
 .main-nav {
-  display: inline-block;
-  text-align: right;
-  width: calc(100% - 122px);
-  vertical-align: middle;
+  display: none;
 }
 
 .main-nav__items {
@@ -100,6 +97,19 @@ body {
 .mobile-nav__item a:active {
   color: white;
   border-bottom: 4px solid white;
+}
+
+@media (min-width: 52rem) {
+  .toggle-button {
+    display: none;
+  }
+
+  .main-nav {
+    display: inline-block;
+    text-align: right;
+    width: calc(100% - 44px);
+    vertical-align: middle;
+  }
 }
 
 /* p::first-letter {
