@@ -117,12 +117,6 @@
   color: rgb(98, 94, 94);
 }
 
-.button:hover,
-.button:active {
-  background: white;
-  color: rgb(105, 167, 105);
-}
-
 .key-features {
   background: rgb(255, 111, 135);
   margin-top: 4rem;
