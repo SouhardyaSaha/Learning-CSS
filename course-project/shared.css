@@ -33,6 +33,9 @@ body {
   background: rgb(38, 204, 38);
   padding: 0.5rem 1rem;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .toggle-button {
@@ -57,22 +60,14 @@ body {
   margin: 0.6rem 0;
 }
 
-.brand-logo {
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .main-nav__brand {
   text-decoration: none;
   font-weight: bold;
-  height: 2rem;
-  display: inline-block;
   vertical-align: middle;
-  /* container has to be block or inline-block for img to respect container height and width */
 }
 
 .main-nav__brand img {
-  height: 100%;
+  height: 2.5rem;
 }
 
 .main-nav {
@@ -80,13 +75,15 @@ body {
 }
 
 .main-nav__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .main-nav__item {
-  display: inline-block;
   margin: 0 1.2rem;
 }
 
@@ -103,19 +100,6 @@ body {
 .mobile-nav__item a:active {
   color: white;
   border-bottom: 4px solid white;
-}
-
-@media (min-width: 52rem) {
-  .toggle-button {
-    display: none;
-  }
-
-  .main-nav {
-    display: inline-block;
-    text-align: right;
-    width: calc(100% - 44px);
-    vertical-align: middle;
-  }
 }
 
 /* p::first-letter {
@@ -157,12 +141,14 @@ body {
 }
 
 .mobile-nav__items {
+  display: flex;
   list-style: none;
-  width: 90%;
-  height: 100%;
-  margin: 10% auto;
   padding: 0;
-  text-align: center;
+  margin: 0;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-nav__item {
@@ -193,25 +179,20 @@ body {
 }
 
 .main-footer {
-  /* position: fixed;
-  bottom: 0;
-  left: 0; */
   width: 100%;
   background: black;
-  padding: 1.5rem;
-  /* margin-top: 24px; */
 }
 
 .main-footer__links {
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
 .main-footer__link {
-  display: inline-block;
-  margin: 0 1rem;
+  margin: 1rem;
 }
 
 .main-footer__link a {
@@ -226,4 +207,19 @@ body {
 
 .open {
   display: block !important;
+}
+
+@media (min-width: 52rem) {
+  .toggle-button {
+    display: none;
+  }
+
+  .main-nav {
+    display: flex;
+  }
+
+  .main-footer__links {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
